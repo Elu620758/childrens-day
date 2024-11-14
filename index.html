@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Children's Day</title>
+    <style>
+      /* Basic styles */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        color: #333;
+        text-align: center;
+        background-image: url("./image.jpeg"); /* Replace with actual image URL */
+        background-size: 100% 100%; /* Initially covers all devices */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Ensures the image stays fixed during scroll */
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        color: #555;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 5px 15px;
+        border-radius: 8px;
+      }
+
+      /* Balloon and candy styles */
+      .balloon,
+      .candy {
+        position: absolute;
+        bottom: 0;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        opacity: 0.8;
+      }
+
+      .balloon {
+        width: 50px;
+        height: 80px;
+        border-radius: 50% 50% 50% 50%;
+        background: radial-gradient(circle, #ff77e9, #ff2baf);
+        animation-name: floatBalloon;
+      }
+
+      .candy {
+        width: 30px;
+        height: 30px;
+        background-color: #ffcc00;
+        border-radius: 50%;
+        animation-name: fallCandy;
+      }
+
+      /* Balloon and candy animations */
+      @keyframes floatBalloon {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+        }
+      }
+
+      @keyframes fallCandy {
+        0% {
+          transform: translateY(-100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      /* Responsive adjustments for smaller devices */
+      @media (max-width: 1200px) {
+        background-size: cover; /* Allows for better scaling on medium screens */
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        background-size: contain; /* Ensures background fully adjusts on smaller screens */
+      }
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 0.9rem;
+        }
+        body {
+          padding: 20px; /* Adds padding for better text alignment on very small screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>14/11/024</h1>
+      <h1>Happy Children's Day! to all children</h1>
+      <h2>Wishing you joy, love, and endless fun on this special day!</h2>
+    </div>
+    <!-- Balloon Elements -->
+    <div class="balloon" style="left: 20%; animation-delay: 1s"></div>
+    <div class="balloon" style="left: 40%; animation-delay: 2s"></div>
+    <div class="balloon" style="left: 60%; animation-delay: 3s"></div>
+
+    <!-- Candy Elements -->
+    <div class="candy" style="left: 10%; animation-delay: 1.5s"></div>
+    <div class="candy" style="left: 50%; animation-delay: 2.5s"></div>
+    <div class="candy" style="left: 70%; animation-delay: 3.5s"></div>
+  </body>
+</html>
